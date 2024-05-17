@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-const ProductImages = ({ images = [[]] }) => {
-  const [main, setMain] = useState(images[0]);
+const ProductImages = (image) => {
+  //const [main, setMain] = useState(images[0]);
+  console.log(image)
   return (
     <Wrapper>
-      <img src={main.url} alt="" className="main " />
+      <img src={image.image} alt="" className="main " />
       <div className="gallery">
-        {images.map((image, index) => {
+        {/* { images.map((image, index) => {
           return (
             <img
               src={image.url}
@@ -16,7 +17,7 @@ const ProductImages = ({ images = [[]] }) => {
               onClick={() => setMain(images[index])}
             />
           );
-        })}
+        })} */}
       </div>
     </Wrapper>
   );

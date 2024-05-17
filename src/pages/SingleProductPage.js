@@ -42,17 +42,26 @@ const SingleProductPage = () => {
     return <Error />;
   }
 
+
+  
   const {
     name,
     price,
     description,
-    stock,
+    inventory,
     stars,
     reviews,
-    id: sku,
+    _id: sku,
     company,
-    images,
+    image,
   } = product;
+
+
+
+
+  
+
+  console.log(image, 'pro')
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -61,7 +70,7 @@ const SingleProductPage = () => {
           back to products
         </Link>
         <div className='product-center'>
-          <ProductImages images={images} />
+          <ProductImages image={image} />
           <section className='content'>
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
@@ -69,7 +78,7 @@ const SingleProductPage = () => {
             <p className='desc'>{description}</p>
             <p className='info'>
               <span>Available : </span>
-              {stock > 0 ? 'In stock' : 'out of stock'}
+              {inventory > 0 ? 'In stock' : 'out of stock'}
             </p>
             <p className='info'>
               <span>SKU :</span>
@@ -80,7 +89,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart product={product} />}
+            {inventory > 0 &&  <AddToCart product={product} />}
           </section>
         </div>
       </div>

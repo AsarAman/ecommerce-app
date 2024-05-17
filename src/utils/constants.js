@@ -44,4 +44,6 @@ export const services = [
 
 export const products_url = 'https://web-production-e27b6.up.railway.app/api/v1/products'
 
-export const single_product_url = `https://cors-anywhere.herokuapp.com/https://course-api.com/react-store-single-product?id=`
+export const single_product_url= `https://web-production-e27b6.up.railway.app/api/v1/products/`
+
+//export const single_product_url = `https://cors-anywhere.herokuapp.com/https://course-api.com/react-store-single-product?id=`
